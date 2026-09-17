@@ -4,11 +4,6 @@ Image stitching for large-scale synchronized binocular UAV image collections.
 
 This repository provides two visual-only registration and mosaicking algorithms.
 
-| Algorithm | Registration strategy | Stereo treatment |
-|---|---|---|
-| **Incremental visual graph** | Build a visual graph incrementally, then solve all images in each connected component | Every verified image edge uses an ordinary 2D correspondence residual |
-| **Rigid-stereo similarity backbone** | Register four-image blocks and refine a persistent two-block window | Separate normal-displacement, relative-rotation, and relative-scale constraints |
-
 Read the [algorithm definitions and comparison](docs/algorithms.md) for the exact
 objectives, propagation rules, assumptions, and limitations. The first stage is
 called `affine` in legacy outputs, but both implementations use a four-parameter
